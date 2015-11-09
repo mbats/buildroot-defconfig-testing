@@ -1,0 +1,17 @@
+language: ruby
+
+sudo: false
+
+install:true
+addons:
+  apt:
+    packages:
+    - bc
+
+script:
+# Build documentation web site
+- echo 'Clone Buildroot repository'
+- git clone git://git.busybox.net/buildroot
+- cd buildroot
+- make list-defconfigs
+- make raspberrypi_defconfig && make
