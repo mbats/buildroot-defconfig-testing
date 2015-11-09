@@ -12,5 +12,6 @@ script:
 - cd buildroot
 - make list-defconfigs
 - echo 'raspberrypi defconfig'
-- make raspberrypi_defconfig && make
+- make raspberrypi_defconfig
+- make 2>&1 | tee build.log | grep ">>>"
 
