@@ -1,7 +1,10 @@
 language: ruby
 
 sudo: false
-
+addons:
+  apt:
+    packages:
+    - bc
 script:
 # Build documentation web site
 - echo 'Clone Buildroot repository'
