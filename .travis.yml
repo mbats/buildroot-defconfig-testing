@@ -14,4 +14,6 @@ script:
 - git clone git://git.busybox.net/buildroot
 - cd buildroot
 - make list-defconfigs
+- echo 'raspberrypi defconfig'
 - make raspberrypi_defconfig && make
+
