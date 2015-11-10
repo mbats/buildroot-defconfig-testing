@@ -13,5 +13,6 @@ script:
 - make list-defconfigs
 - echo 'raspberrypi defconfig'
 - make raspberrypi_defconfig
-- travis_wait make 2>&1 | tee build.log | grep ">>>"
+- while true ; do echo "Still building" ; sleep 60 ; done & stupidpid=$! make 2>&1 | tee build.log | grep ">>>"
+- kill ${stupidpid}
 
