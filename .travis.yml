@@ -19,5 +19,6 @@ script:
 - kill ${stupidpid}
 - scp -i ~\/.ssh/buildroot-kim build.log buildroot@autobuild.buildroot.org:~/defconfigs-build/${TRAVIS_BUILD_NUMBER}-${DEFCONFIG_NAME}-${TRAVIS_JOB_ID}.log
 before_install:
+- mkdir ~\/.ssh/
 - openssl aes-256-cbc -K $encrypted_ff43b1ef5e6e_key -iv $encrypted_ff43b1ef5e6e_iv
   -in buildroot-kim-ssh-key -out ~\/.ssh/buildroot-kim -d
